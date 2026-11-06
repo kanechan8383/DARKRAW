@@ -1,6 +1,6 @@
 <div align="center">
 
-# DARKRAW
+# DARKRAW | 暗房快修
 
 **从摄影师的角度出发，把 RAW 编辑、液化、磨皮、调色放进同一个窗口**
 
