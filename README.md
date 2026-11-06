@@ -76,21 +76,11 @@ DARKRAW 是一款由摄影师独立开发的桌面 RAW 处理软件。它要解�
 > 仅支持 M 系列芯片，Intel Mac 暂不支持。
 
 1. 下载 `DARKRAW-0.7.0-macos-aarch64.zip`
-2. 解压后打开「终端」，进入解压出的目录
-3. 首次运行前赋予执行权限并启动：
+2. 解压后会得到一个 `.dmg` 磁盘映像，双击打开
+3. 把 DARKRAW 图标拖进「应用程序」文件夹，即完成安装
+4. 从「应用程序」中打开即可使用。首次打开如提示「无法验证开发者」，前往「系统设置 → 隐私与安全性」，点击「仍要打开」授权一次
 
-```bash
-chmod +x darkraw-cli
-./darkraw-cli
-```
-
-4. 如果系统提示「无法验证开发者」或被 Gatekeeper 拦截，执行：
-
-```bash
-xattr -dr com.apple.quarantine darkraw-cli
-```
-
-然后再运行一次即可。
+无需命令行操作，也无需额外运行库。
 
 ## 系统要求
 
@@ -101,9 +91,29 @@ xattr -dr com.apple.quarantine darkraw-cli
 
 ## 技术栈
 
+- 基础框架基于 **LightCraft**（纯 Rust 的照片图库与 RAW 显影引擎）
 - 全部逻辑以 **纯 Rust** 实现，无重量级运行时依赖
 - 图像/人像相关能力基于**开源模型**
 - 开发工具：**TRAE IDE**
+
+## 基于 LightCraft，致谢开源
+
+DARKRAW 的基础框架构建在 **LightCraft** 之上 —— 一个干净实现、纯 Rust 的照片图库与 RAW 显影引擎（MIT OR Apache-2.0）。向上游作者致敬，也感谢本程序调用的每一个开源项目与模型及其提供者。
+
+| 项目 / 模型 | 作者 / 来源 | 用途 | 许可证 |
+| --- | --- | --- | --- |
+| LightCraft | storytold（本程序构建于其上的上游项目） | 基础框架 | MIT OR Apache-2.0 |
+| egui · eframe · egui_extras | Emil Ernerfeldt and contributors | 界面 | MIT OR Apache-2.0 |
+| wgpu | the gfx-rs community | GPU 渲染与计算 | MIT OR Apache-2.0 |
+| rayon | the rayon-rs project | 数据并行 | MIT OR Apache-2.0 |
+| Serde · serde_json | David Tolnay and contributors | 序列化 | MIT OR Apache-2.0 |
+| image · png · zune-jpeg · tiff | their respective authors | 图像编解码 | MIT OR Apache-2.0 |
+| candle | Hugging Face | 张量运算 | MIT OR Apache-2.0 |
+| YuNet（人脸检测，5 关键点） | Shiqi Yu, via OpenCV Zoo | 人脸检测 | MIT |
+| PP-HumanSeg（人像分割） | Baidu PaddleSeg, exported by OpenCV Zoo | 人像分割 | Apache-2.0 |
+| RawNIND UtNet2（Bayer 降噪） | darktable-ai, trained on the RawNIND dataset | RAW 降噪 | GPL-3.0 |
+
+> 各组件版权归其原作者所有，按各自许可证分发。完整的许可证文本随安装包一同分发。
 
 ## 更新日志
 
