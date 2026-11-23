@@ -5,13 +5,13 @@
 
 <div align="center">
 
-# DARKRAW | 暗房快修
+# DARKRAW | 暗流修图
 
 **从摄影师的角度出发，把 RAW 编辑、液化、磨皮、调色放进同一个窗口**
 
 *Fast RAW editing · Liquify · Skin retouch · Color grading — built in pure Rust*
 
-![Version](https://img.shields.io/badge/version-0.7.0-4b8bf5)
+![Version](https://img.shields.io/badge/version-0.8.5-4b8bf5)
 ![Platform](https://img.shields.io/badge/platform-Windows%20x64%20%7C%20macOS%20(Apple%20Silicon)-lightgrey)
 ![Rust](https://img.shields.io/badge/built%20with-Rust-orange)
 
@@ -41,37 +41,71 @@ DARKRAW 是一款由摄影师独立开发的桌面 RAW 处理软件。它要解�
 
 ## 界面预览
 
-### 脸部细节处理与磨皮
+### 0.8.5 新增
 
-<img src="docs/screenshots/脸部细节处理和磨皮处理.jpg" alt="脸部细节处理与磨皮" width="100%">
+#### 富士数码全套色彩
 
-磨皮线分成「小瑕疵 / 中瑕疵 / 大瑕疵」三档，纹理度、光泽度、肤色均匀度独立可调；冷光控制（仅 RAW）提供皮肤亮度、对比度、美白、暖度与色调；面部轮廓可做瘦脸等微调。右侧还内置婚纱写真、海报大片、美妆广告、儿童写真、男士商务、证件照等皮肤预设。
+<img src="docs/screenshots/0.8.5/01-fujifilm-colors.jpg" alt="富士数码全套色彩" width="100%">
 
-### 肢体识别
+色彩预设内置整套富士数码胶卷风格，一键切换，右侧缩略图可直接预览不同影调的差异，原片与效果并排对比。
 
-<img src="docs/screenshots/肢体识别.jpg" alt="肢体识别" width="100%">
+#### 更细分的脸部调节
 
-人像面板支持自动识别、开启修正与一键重置，并按「脸部 / 身体」分区调节。身体部分提供腰部、手臂、腿部三项独立参数，识别人体关键部位后直接微调形体，液化时更省力也更准确。
+<img src="docs/screenshots/0.8.5/02-face-adjust.jpg" alt="更细分的脸部调节" width="100%">
 
-### 光影助手
+脸部面板把五官与轮廓拆成更细的独立滑杆，逐项微调、幅度可控，对比视图同时呈现原片与结果。
 
-<img src="docs/screenshots/光影助手.jpg" alt="光影助手" width="100%">
+#### AI 处理模块
 
-内置无光影、侧逆光、顶光、伦勃朗光、蝴蝶光五种光型，一键切换。可调光影强度、轮廓光强度与范围、发丝光、逆光光晕与环境暖调，对人物脸部二次打光、重塑光影层次。
+<img src="docs/screenshots/0.8.5/03-ai-processing.jpg" alt="AI 处理模块" width="100%">
 
-### HSL 和调色
+新增 AI 处理面板，降噪、锐化、磨皮集中在一处，可分别开关并即时预览效果。
+
+#### 脸型与肤色选择
+
+<img src="docs/screenshots/0.8.5/04-face-shape-skin-tone.jpg" alt="脸型与肤色选择" width="100%">
+
+内置多套脸型模板与肤色选项，点选即可套用，再配合滑杆做细节微调。
+
+#### 全新的脸部识别
+
+<img src="docs/screenshots/0.8.5/05-face-detection.jpg" alt="全新的脸部识别" width="100%">
+
+自动识别人脸并显示识别状态，五官、脸型与磨皮等调节都基于识别结果进行。
+
+#### 全新的肢体识别（手部）
+
+<img src="docs/screenshots/0.8.5/06-body-hand.jpg" alt="全新的肢体识别（手部）" width="100%">
+
+自动定位手臂与手部，液化时可直接针对局部形体调整，双手靠近脸部的姿势也能稳定识别。
+
+#### 全新的肢体识别（腿部）
+
+<img src="docs/screenshots/0.8.5/07-body-leg.jpg" alt="全新的肢体识别（腿部）" width="100%">
+
+站姿全身照可识别腿部，单独控制腿部形体；腰部、手臂、腿部三项参数各管各的，互不干扰。
+
+#### 升级版逆光
+
+<img src="docs/screenshots/0.8.5/08-backlight.jpg" alt="升级版逆光" width="100%">
+
+逆光面板重做：面光、光晕、发丝光独立可调，多人合影同样适用。
+
+### 核心功能界面
+
+#### HSL 和调色
 
 <img src="docs/screenshots/HSL和调色.jpg" alt="HSL 和调色" width="100%">
 
 按色相通道分别调整色相、饱和度与明度，并可点选「点颜色」用吸管在照片上取色，定向修改某一种颜色；颜色分级提供阴影、中间调、高光三个独立色轮。
 
-### 蒙版处理
+#### 蒙版处理
 
 <img src="docs/screenshots/蒙版处理.jpg" alt="蒙版处理" width="100%">
 
 创建蒙版支持主体、天空、背景、画笔，以及线性、径向、明度、颜色四类蒙版；叠加显示可切换彩色标注，配合图钉确认作用范围，不透明度可调。
 
-### 多线程处理
+#### 多线程处理
 
 <img src="docs/screenshots/多线程处理.jpg" alt="多线程处理" width="100%">
 

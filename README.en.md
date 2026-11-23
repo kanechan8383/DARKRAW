@@ -11,7 +11,7 @@
 
 *Fast RAW editing · Liquify · Skin retouch · Color grading — built in pure Rust*
 
-![Version](https://img.shields.io/badge/version-0.7.0-4b8bf5)
+![Version](https://img.shields.io/badge/version-0.8.5-4b8bf5)
 ![Platform](https://img.shields.io/badge/platform-Windows%20x64%20%7C%20macOS%20(Apple%20Silicon)-lightgrey)
 ![Rust](https://img.shields.io/badge/built%20with-Rust-orange)
 
@@ -41,25 +41,59 @@ Speed is the first priority: multi-core scheduling and the graphics pipeline are
 
 ## Screenshots
 
-### Facial detail and skin retouch
+### New in 0.8.5
 
-<img src="docs/screenshots/脸部细节处理和磨皮处理.jpg" alt="Facial detail and skin retouch" width="100%">
+#### Fujifilm digital color set
 
-Skin retouching is split into three levels — blemish / medium blemish / large blemish — with independent controls for texture, gloss and skin-tone evenness. Cool light control (RAW only) provides skin brightness, contrast, whitening, warmth and tint; facial contour offers refinements such as face slimming. The right panel also ships with skin presets for wedding portraits, poster/fashion shots, beauty campaigns, children's portraits, men's business portraits and ID photos.
+<img src="docs/screenshots/0.8.5/01-fujifilm-colors.jpg" alt="Fujifilm digital color set" width="100%">
 
-### Body detection
+The color presets ship the full Fujifilm digital film set. Switch in one click and preview each look in the thumbnail strip, with the original and the result side by side.
 
-<img src="docs/screenshots/肢体识别.jpg" alt="Body detection" width="100%">
+#### Finer face adjustments
 
-The portrait panel supports automatic detection, correction toggle and one-click reset, with separate face and body sections. The body section exposes independent waist, arm and leg parameters, so after detecting key body parts you can reshape the figure directly — faster and more accurate liquify work.
+<img src="docs/screenshots/0.8.5/02-face-adjust.jpg" alt="Finer face adjustments" width="100%">
 
-### Portrait Light
+The face panel splits features and contour into more granular sliders — tune one at a time with controlled strength, while the compare view shows the original and the result together.
 
-<img src="docs/screenshots/光影助手.jpg" alt="Portrait Light" width="100%">
+#### AI processing module
 
-Five built-in light patterns — no light, side backlight, top light, Rembrandt light and butterfly light — switchable in one click. Adjust light strength, rim light strength and range, hair light, backlight halo and ambient warmth to relight a face and rebuild the light hierarchy.
+<img src="docs/screenshots/0.8.5/03-ai-processing.jpg" alt="AI processing module" width="100%">
 
-### HSL and color grading
+A new AI processing panel gathers denoise, sharpen and skin retouch in one place, each toggleable with an instant preview.
+
+#### Face shape and skin tone
+
+<img src="docs/screenshots/0.8.5/04-face-shape-skin-tone.jpg" alt="Face shape and skin tone" width="100%">
+
+Multiple face-shape templates and skin-tone swatches: click to apply, then fine-tune with the sliders.
+
+#### New face detection
+
+<img src="docs/screenshots/0.8.5/05-face-detection.jpg" alt="New face detection" width="100%">
+
+Detects faces automatically and shows the detection status; feature, face-shape and skin-retouch adjustments all build on that result.
+
+#### New body detection (hands)
+
+<img src="docs/screenshots/0.8.5/06-body-hand.jpg" alt="New body detection (hands)" width="100%">
+
+Locates arms and hands automatically so liquify can target local shapes — stable even with hands close to the face.
+
+#### New body detection (legs)
+
+<img src="docs/screenshots/0.8.5/07-body-leg.jpg" alt="New body detection (legs)" width="100%">
+
+Recognizes legs in full-body standing shots and controls the leg shape separately; waist, arm and leg parameters stay independent of each other.
+
+#### Upgraded backlight
+
+<img src="docs/screenshots/0.8.5/08-backlight.jpg" alt="Upgraded backlight" width="100%">
+
+A rebuilt backlight panel: face light, glow and hair light are independently adjustable, and it works with group shots too.
+
+### Core features
+
+#### HSL and color grading
 
 <img src="docs/screenshots/HSL和调色.jpg" alt="HSL and color grading" width="100%">
 
