@@ -11,7 +11,7 @@
 
 *Fast RAW editing · Liquify · Skin retouch · Color grading — built in pure Rust*
 
-![Version](https://img.shields.io/badge/version-0.8.5-4b8bf5)
+![Version](https://img.shields.io/badge/version-0.7.0-4b8bf5)
 ![Platform](https://img.shields.io/badge/platform-Windows%20x64%20%7C%20macOS%20(Apple%20Silicon)-lightgrey)
 ![Rust](https://img.shields.io/badge/built%20with-Rust-orange)
 
