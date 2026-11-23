@@ -41,7 +41,7 @@ Speed is the first priority: multi-core scheduling and the graphics pipeline are
 
 ## Screenshots
 
-### New in 0.8.5
+### New features
 
 #### Fujifilm digital color set
 
